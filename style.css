@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.head {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0%;
+    padding: 0 0.3rem;
+    width: 100vw;
+    height: 80px;
+    background-color: white;
+    color: black;
+    align-items: center;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 2rem;
+    color: blueviolet;
+    animation: logobounce 1s;
+
+}
+
+.icon {
+    visibility: hidden;
+    color: blueviolet;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+i:hover {
+    background-color: blueviolet;
+    color: white;
+    border-radius: 100%;
+
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 0.5rem;
+    margin-inline: 0.5rem;
+    color: black;
+    text-transform: uppercase;
+    display: block;
+}
+
+ul li a:hover {
+    background-color: blueviolet;
+    color: white;
+    border-radius: 1rem;
+}
+
+.container {
+    margin-top: 10%;
+    width: 100vw;
+    z-index: 00000;
+}
+
+.maintext button {
+
+    background: linear-gradient(0deg, blueviolet, transparent);
+    border-radius: 2rem;
+    border: 2px solid rgb(199, 143, 199);
+    cursor: pointer;
+    color: white;
+    font-weight: 900;
+    width: 132px;
+    text-transform: uppercase;
+    font-size: medium;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.maintext button:hover {
+    background-color: rgb(132, 6, 249);
+    transform: translateY(-5px);
+}
+
+.maintext {
+    width: 50%;
+}
+
+.main img {
+    width: 50%;
+}
+
+.main img:hover {
+    animation: wobble 0.5s ease-in-out infinite;
+}
+
+.main h1 {
+    max-width: 77vw;
+}
+
+.foods,
+.offers {
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInAnimation 1s ease-out forwards;
+}
+
+.foodcard,
+.offercard,
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 20vw;
+    height: auto;
+    background: linear-gradient(0deg, #8400ce, transparent);
+    border-radius: 1em;
+    padding: 1rem;
+    color: whitesmoke;
+    font-weight: 600;
+    border: 2px solid #f5e7ff;
+    box-sizing: content-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foodcard:hover,
+.offercard:hover,
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    background-color: blueviolet;
+    color: whitesmoke;
+}
+
+.foodcard img {
+    width: 100%;
+    height: 20vh;
+    border-radius: 100%;
+    border: 4px solid darkorchid;
+}
+
+.offercard img {
+    height: 24vh;
+    width: 100%;
+    border: 2px solid purple;
+}
+
+.footer {
+    background-color: #000000;
+    color: whitesmoke;
+    bottom: 0;
+    width: 100vw;
+    padding: 1rem;
+}
+
+.card-details {
+    height: 45vh;
+    width: 40vw;
+    top: 5%;
+    position: fixed;
+    left: 49%;
+    right: 50%;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 1em;
+    background-color: blueviolet;
+    color: whitesmoke;
+    transform: translate(-50%, 40%);
+    box-sizing:content-box;
+
+}
+
+.card-details img {
+    height: 30vh;
+    width: 35vw;
+    border-radius: 50%;
+}
+.card-details i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:rgb(83, 6, 154) ;
+    padding: 0.5rem;
+    border-radius: 10em;
+}
+.card-details i:hover{
+    background-color: rgb(198, 23, 23);
+}
+@media only screen and (max-width: 680px) {
+
+    .icon {
+        visibility: visible;
+    }
+
+    .main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .maintext,
+    .main img {
+        width: 100%;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .foodcard,
+    .offercard,
+    .card {
+        min-width: 60vw;
+    }
+
+    ul li a {
+        color: whitesmoke !important;
+    }
+
+    .showdata {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 80px;
+        background-color: rgb(144, 50, 233);
+        width: 100vw;
+        align-items: center;
+        font-weight: 700;
+    }
+
+    .reviewcard {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-details{
+        height: 35vh;
+        width: 50vw;
+    }
+    .card-details img{
+        height: 20vh;
+        width: 40vw;
+    }
+}
+
+
+/*animations */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logobounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* burger image  */
+@keyframes wobble {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* review slider  */

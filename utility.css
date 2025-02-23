@@ -1,0 +1,22 @@
+.pd{
+    padding: 1rem;
+}
+.mr{
+    margin: 1rem;
+}
+.flex{
+    display: flex;
+}
+.c-flex{
+    display: flex;
+    flex-direction: column;
+}
+.al-cen{
+    align-items: center;
+}
+.jc{
+    justify-content: center;
+}
+.sa{
+    justify-content: space-around;
+}
